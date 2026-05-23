@@ -1,16 +1,19 @@
 //import css
-import "../css/Navbar.css"
+import "../css/NavBar.css"
+import CartWidget from "./CartWidget"
 
-const Navbar= ()=>{
-
+const Navbar= (Props)=>{
+//logica
     return(
         <nav className ='nav-container'> 
-            <a href="">Coder App</a>
-            <a href="">Nuevos</a>
-            <a href="">Ofertas</a>
-            <a href="">Mas Vendidos</a>
+            <a href="" className="anchor-nav"  >
+                <img src='../logo.png' alt="logo"  className="logo"/>
+            </a>
+            <a href="" className="anchor-nav">Nuevos</a>
+            <a href="" className="anchor-nav">Ofertas</a>
+            <a href="" className="anchor-nav">Mas Vendidos</a>
+            <CartWidget compra={15} cart={Props.cart} />
         </nav>
     )
 }
-
 export default Navbar
